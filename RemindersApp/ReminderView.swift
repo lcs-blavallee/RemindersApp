@@ -19,14 +19,20 @@ struct ReminderView: View {
     
     // Returns the button's user interface...
     var body: some View {
-        VStack (alignment: .leading) {
+        HStack {
             
-            // First layer
-            Text(reminder)
-                .foregroundStyle(reminderColor)
-            Text(reminderDate)
-                .foregroundStyle(reminderDateColor)
+            Image(systemName: "circle")
+                .foregroundColor(Color.gray)
             
+            VStack (alignment: .leading) {
+                
+                // First layer
+                Text(reminder)
+                    .foregroundStyle(reminderColor)
+                Text(reminderDate)
+                    .foregroundStyle(reminderDateColor)
+                
+            }
         }
     }
 }
